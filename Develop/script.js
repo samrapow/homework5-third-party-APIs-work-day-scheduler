@@ -38,11 +38,11 @@ $(document).ready(function () {
         $(this).val(localStorage.getItem("item-" + $(this).attr("data-store")));
     });
 
-    saveButton.on("click", function (itm) {
-        $("*[data-store]").each(function(itm) {
+    saveButton.on("click", function () {
+        $("*[data-store]").each(function() {
             localStorage.setItem ("item-" + $(this).attr("data-store"), $(this).val());
-    });
-        })
+        });
+    })
             
 
 })

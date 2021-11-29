@@ -3,11 +3,14 @@ var today = moment();
 var timeblocks = $('.container');
 var rows = $('.row');
 var nowHour = parseInt(moment().format('H'));
+var saveButton = $('.saveBtn');
 
-// Print current day in requested format
+
+// Print current day in requested format at top of calendar
 currentDay.text(today.format("dddd, MMMM Do"));
 
-// Loop through rows to set color
+// WHEN I view the timeblocks for that day
+// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 rows.each(function(i) {
     var rowID = this.id;
     var rowHour;
@@ -27,3 +30,22 @@ rows.each(function(i) {
         }
     }
 })
+
+// WHEN I click the save button for that timeblock
+// THEN the text for that event is saved in local storage
+$(document).ready(function () {
+    $("*[data-store]").each(function () {
+        $(this).val(localStorage.getItem("item-" + $(this).attr("data-store")));
+    });
+
+    saveButton.on("click", function (itm) {
+        $("*[data-store]").each(function(itm) {
+            localStorage.setItem ("item-" + $(this).attr("data-store"), $(this).val());
+    });
+        })
+            
+
+})
+
+
+

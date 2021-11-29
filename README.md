@@ -6,7 +6,7 @@ I created a work day scheduler. At the top of the webpage, a user can see the cu
 
 ## Screenshot
 
-![Code Quiz Screenshot](Assets/screenshot.jpg) "Code Quiz Screenshot")
+![Code Quiz Screenshot](Assets/screenshot.jpg "Code Quiz Screenshot")
 
 ## Deployed Application
 
